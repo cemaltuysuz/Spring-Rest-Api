@@ -1,4 +1,4 @@
-package com.cemaltuysuz.springRestApi.Entities;
+package com.cemaltuysuz.springRestApi.entity;
 
 import javax.persistence.*;
 
@@ -8,7 +8,7 @@ public class Student {
     @Id
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     @Column(name = "Name")
     private String name;
     @Column(name = "LastName")
@@ -26,12 +26,8 @@ public class Student {
     public Student() {
     }
 
-    public int getId() {
+    public long getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
